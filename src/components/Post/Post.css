@@ -1,0 +1,47 @@
+.Post {
+    width: 806px;
+    height: flex;
+    padding: 20px 30px;
+    text-align: left;
+    border: none;
+    box-shadow: 0 3px 6px #000000 0.5;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: #292929;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Post:hover,
+.Post:active {
+    background-color: #292929;
+}
+
+.Author {
+    padding-bottom: 30px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 'Regular';
+}
+
+.Title {
+    padding-bottom: 15px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 'Medium';
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .Post{
+        width: 600px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .Post{
+        width: 320px;
+    }
+}
