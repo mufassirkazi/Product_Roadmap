@@ -1,0 +1,32 @@
+.EmailSummary {
+    color: #ffffff;
+    padding: 30px 40px;
+}
+
+.heading {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 35px;
+
+}
+
+.input {
+    font-size: 16px;
+    color: #222222;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    width: 232px;
+    height: 28px;
+    border-radius: 6px;
+    padding-left: 12px;
+}

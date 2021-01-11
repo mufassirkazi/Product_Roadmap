@@ -6,6 +6,7 @@ import FullPost from '../../components/FullPost/FullPost';
 import './Features.css';
 import Modal from '../../components/UI/Modal/Modal';
 import Aux from '../hoc/Aux/Aux';
+import EmailSummary from '../../components/UI/EmailSummary/EmailSummary';
 
 
 
@@ -15,7 +16,8 @@ class Features extends Component {
         posts: [],
         selectedPostId: null,
         updateCounter: false,
-        giveEmail: false
+        giveEmail: false,
+        emailIdGiven: false
     }
 
     componentDidMount() {
@@ -43,8 +45,9 @@ class Features extends Component {
     }
 
     toggleButton = (id) => {
+        if (!this.state.emailIdGiven){
         this.setState({ giveEmail: true })
-        console.log(this.state.giveEmail)
+        } else {
         this.state.posts.forEach(post => {
 
             if (post.id === id && !post.state) {
@@ -59,6 +62,8 @@ class Features extends Component {
             }
 
         })
+
+    }
 
 
     }
@@ -121,6 +126,11 @@ class Features extends Component {
         this.setState({ giveEmail: false })
     }
 
+    emailIDGivenHandler = () => {
+        this.setState({ giveEmail: false })
+        this.setState({emailIdGiven: true})
+    }
+
 
     render() {
 
@@ -142,9 +152,9 @@ class Features extends Component {
 
         return (
             <Aux>
-                <Modal show={true} modalClosed={this.popupCancelHandler}>
-                    Some random text
-                    </Modal>
+                <Modal show={this.state.giveEmail} modalClosed={this.popupCancelHandler}>
+                    <EmailSummary clicked = {this.emailIDGivenHandler}/>
+                </Modal>
 
 
                 <section className="Posts">
