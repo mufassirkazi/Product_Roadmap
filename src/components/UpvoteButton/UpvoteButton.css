@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
 .UpvoteButton {
     width: 95px;
     height: 32px;
@@ -10,8 +14,18 @@
 
 }
 
-.UpvoteButton:hover,
-.UpvoteButton:active {
-    border: 1px #560AFF;
+.UpvoteButtonClicked {
     background-color: #E2D5FF;
 }
+
+.DownvotButtonClicked {
+    background-color: #fff;
+}
+
+.UpvoteButton:hover,
+.UpvoteButton:active,
+.UpvoteButton:focus {
+    background-color: #E2D5FF;
+    outline: transparent;
+}
+

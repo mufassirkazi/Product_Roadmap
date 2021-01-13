@@ -9,7 +9,7 @@ const post = (props) => (
     <article className="Post" onClick = {props.clicked}>
         <div>
             <div className="Title">{props.title}</div>
-            <div className="Author">{props.author}</div>
+            <div className="Author">{props.body}</div>
             <UpvoteButton clicked = {props.click} key= {props.key}> 
                     <img src={Polygon} style= {{width: '15px', height: '13px', paddingRight: '5px' ,flexDirection:'row'}}  alt= " "/>
                     Upvote

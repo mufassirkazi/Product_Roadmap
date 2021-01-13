@@ -30,3 +30,19 @@
     border-radius: 6px;
     padding-left: 12px;
 }
+
+.Button {
+    background-color: #560AFF;
+    border-radius: 6px;
+    color: white;
+    font-size: '16px';
+    font-weight: 500;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: flex;
+    height: 32px;
+    border: none;
+    margin-left: 10px;
+    font-family: Rubik;
+    
+}
